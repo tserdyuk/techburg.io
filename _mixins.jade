@@ -1,0 +1,11 @@
+- var getPost = function(ref) {
+-	return posts.filter(function(post) {
+-		return post.ref == ref
+-	})[0]
+- }
+
+mixin post(ref)
+	extends _page.jade
+	block head: title= getPost(ref).title
+	block body
+		article: block
