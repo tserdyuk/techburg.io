@@ -7,7 +7,17 @@ body, ul
 	margin: 0
 
 main
-	padding-top: $header-height
+	position: absolute
+	display: flex
+	flex-direction: column
+	height: 100%
+	width: 100%
+
+.header-space
+	height: $header-height
+
+section
+	flex-grow: 1
 
 header, .overlay
 	top: 0
