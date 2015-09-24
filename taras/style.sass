@@ -1,7 +1,8 @@
 
 $header-height: 30px
 $content-margin: 20px
-$content-width: 960px
+$content-width: 800px
+$content-max-width: 960px
 
 body, ul
 	margin: 0
@@ -44,7 +45,7 @@ header, footer
 	pointer-events: none
 	display: flex
 	height: 100%
-	div
+	> div
 		width: 100%
 		max-width: $content-width
 aside
@@ -54,3 +55,10 @@ aside
 .title
 	font-weight: bold
 	text-align: center
+
+@media screen and (max-width: $content-max-width)
+	.section, .header, .footer
+		max-width: $content-max-width
+	.overlay
+		> div
+			max-width: $content-max-width
