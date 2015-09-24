@@ -1,20 +1,18 @@
+include _mixins.jade
 extends ../_html.jade
 block head
 	title Taras Serdyuk
+	link(rel="stylesheet", href="style.css")
 block body
 	main
 		header Taras Serdyuk - Full-Stack Developer
-		section
-			.title About Me
+		+section("About Me", "#8BBECC")
 			include _info/lorem.jade
-		section
-			.title Featured Projects
+		+section("Featured Projects", "#61DEFF")
 			include _info/lorem.jade
-		section
-			.title Blog
+		+section("Blog", "#AEEEFF")
 			nav: ul: each post in taras.posts
 				li: a(href= 'blog/'+ post.ref +'.html')= post.title
-		section
-			.title Contacts
+		+section("Contacts", "#316F7F")
 			include _info/lorem.jade
 		footer Footer

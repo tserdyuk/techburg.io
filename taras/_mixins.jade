@@ -1,3 +1,10 @@
+mixin section(title, color)
+	section(style= 'background: ' + color)
+		.section
+			.title= title
+			block
+
+
 - var getPost = function(ref) {
 -	return posts.filter(function(post) {
 -		return post.ref == ref
@@ -5,7 +12,7 @@
 - }
 
 mixin post(ref)
-	extends _page.jade
+	extends ../_html.jade
 	block head: title= getPost(ref).title
 	block body
 		article: block
