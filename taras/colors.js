@@ -1,14 +1,21 @@
 
-array(document.getElementsByTagName('section'))
-	.forEach(section => section.style.background = color())
+const colors = [
+	[0,0,0], [0,0,1], [0,1,0], [0,1,1],
+	[1,0,0], [1,0,1], [1,1,0], [1,1,1]
+].map(color)
 
-function color() {
-	const channel = () => random(160, 220).toString(16)
-	return '#' + channel() + channel() + channel()
+array(document.getElementsByTagName('section'))
+	.forEach(section => section.style.background =
+		colors.splice(random(0, colors.length), 1))
+
+
+function color([r, g, b]) {
+	const channel = (k) => random(160 + 40 * k, 20).toString(16)
+	return '#' + channel(r) + channel(g) + channel(b)
 }
 
-function random(from, to) {
-	return Math.floor(Math.random() * (to - from)) + from
+function random(from, range) {
+	return Math.floor(Math.random() * range) + from
 }
 
 function array(value) {
