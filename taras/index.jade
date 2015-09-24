@@ -2,5 +2,19 @@ extends _page.jade
 block head
 	title Taras Serdyuk
 block body
-	ul: each post in posts
-		li: a(href= 'blog/'+ post.ref +'.html')= post.title
+	main
+		header Taras Serdyuk - Full-Stack Developer
+		section
+			.title About Me
+			include _info/lorem.jade
+		section
+			.title Featured Projects
+			include _info/lorem.jade
+		section
+			.title Blog
+			nav: ul: each post in taras.posts
+				li: a(href= 'blog/'+ post.ref +'.html')= post.title
+		section
+			.title Contacts
+			include _info/lorem.jade
+		footer Footer
