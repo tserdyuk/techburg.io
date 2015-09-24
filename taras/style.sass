@@ -1,9 +1,12 @@
 
+$header-height: 30px
+$content-margin: 20px
+
 body, ul
 	margin: 0
 
 main
-	padding-top: 20px
+	padding-top: $header-height
 
 header
 	top: 0
@@ -12,9 +15,9 @@ header
 	width: 100%
 
 .header
-	height: 30px
-	line-height: 30px
-	padding: 0 20px 0 20px
+	height: $header-height
+	line-height: $header-height
+	padding: 0 $content-margin 0 $content-margin
 
 .section, .header, .footer
 	background: rgba(255, 255, 255, 0.2)
@@ -23,7 +26,7 @@ header
 	margin: 0 auto
 
 .section
-	padding: 20px
+	padding: $content-margin
 
 .title
 	font-weight: bold
