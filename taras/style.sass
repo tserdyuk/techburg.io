@@ -9,7 +9,7 @@ body, ul
 main
 	padding-top: $header-height
 
-header
+header, .overlay
 	top: 0
 	position: fixed
 	width: 100%
@@ -23,13 +23,23 @@ header, footer
 	padding: 0 $content-margin 0 $content-margin
 
 .section, .header, .footer
-	background: rgba(255, 255, 255, 0.3)
 	box-sizing: border-box
 	max-width: $content-width
 	margin: 0 auto
 
 .section
 	padding: $content-margin
+
+.overlay
+	pointer-events: none
+	display: flex
+	height: 100%
+	div
+		width: 100%
+		max-width: $content-width
+aside
+	flex-grow: 1
+	background: rgba(0, 0, 0, 0.15)
 
 .title
 	font-weight: bold
