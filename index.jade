@@ -2,4 +2,5 @@ extends _page.jade
 block head
 	title Techburg
 block body
-	div Main
+	ul: each post in posts
+		li: a(href= 'blog/'+ post.ref +'.html')= post.title
