@@ -17,12 +17,11 @@ main
 .grey
 	background: grey
 
-.header, .footer
-	height: $header-height
-	line-height: $header-height
-	padding: 0 $content-margin 0 $content-margin
+header, footer > .content
+	@include text-height($header-height)
+	padding: 0 $content-margin
 
-.section
+section > .content
 	padding: $content-margin
 
 .overlay
