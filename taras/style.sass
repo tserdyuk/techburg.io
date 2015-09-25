@@ -14,26 +14,12 @@ main
 .header-space
 	min-height: $header-height
 
-.grey
-	background: grey
-
 header, footer > .content
 	@include text-height($header-height)
 	padding: 0 $content-margin
 
 section > .content
 	padding: $content-margin
-
-.overlay
-	pointer-events: none
-	display: flex
-
-aside
-	background: rgba(0, 0, 0, 0.15)
-
-.title
-	font-weight: bold
-	text-align: center
 
 .content
 	box-sizing: border-box
@@ -42,3 +28,17 @@ aside
 	max-width: $content-width
 	@media screen and (max-width: $content-max-width)
 		max-width: $content-max-width
+
+.overlay
+	pointer-events: none
+	display: flex
+	> aside
+		background: rgba(0, 0, 0, 0.15)
+
+
+.title
+	font-weight: bold
+	text-align: center
+
+.grey
+	background: grey
