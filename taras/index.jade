@@ -6,8 +6,8 @@ block head
 block body
 	main.full-size
 		header.fixed.full-width.grey
-			.header.content Taras Serdyuk - Full-Stack Developer
-		.header-space
+			.content Taras Serdyuk - Full-Stack Developer
+		header: .content
 		+section("About Me", "#8BBECC")
 			include _info/lorem.jade
 		+section("Featured Projects", "#61DEFF")
@@ -17,8 +17,7 @@ block body
 				li: a(href= 'blog/'+ post.ref +'.html')= post.title
 		+section("Contacts", "#316F7F")
 			include _info/lorem.jade
-		footer.full-width.grey
-			.footer.content Footer
+		footer.grey: .content Footer
 	.overlay.fixed.full-size
 		aside.grow
 		.content
