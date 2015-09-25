@@ -5,8 +5,8 @@ block head
 	link(rel="stylesheet", href="style.css")
 block body
 	main.full-size
-		header.fixed.full-width
-			.header.content-width Taras Serdyuk - Full-Stack Developer
+		header.fixed.full-width.grey
+			.header.content Taras Serdyuk - Full-Stack Developer
 		.header-space
 		+section("About Me", "#8BBECC")
 			include _info/lorem.jade
@@ -17,10 +17,10 @@ block body
 				li: a(href= 'blog/'+ post.ref +'.html')= post.title
 		+section("Contacts", "#316F7F")
 			include _info/lorem.jade
-		footer.full-width
-			.footer.content-width Footer
+		footer.full-width.grey
+			.footer.content Footer
 	.overlay.fixed.full-size
 		aside.grow
-		.content-width
+		.content
 		aside.grow
 	script(src="colors.js")

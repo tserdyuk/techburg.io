@@ -14,17 +14,13 @@ main
 .header-space
 	min-height: $header-height
 
-header, footer
+.grey
 	background: grey
 
 .header, .footer
 	height: $header-height
 	line-height: $header-height
 	padding: 0 $content-margin 0 $content-margin
-
-.section, .header, .footer
-	box-sizing: border-box
-	margin: 0 auto
 
 .section
 	padding: $content-margin
@@ -40,8 +36,10 @@ aside
 	font-weight: bold
 	text-align: center
 
-.content-width
-	@extend .full-width
+.content
+	box-sizing: border-box
+	margin: 0 auto
+	width: 100%
 	max-width: $content-width
 	@media screen and (max-width: $content-max-width)
 		max-width: $content-max-width
