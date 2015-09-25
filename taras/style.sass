@@ -11,8 +11,6 @@ main
 	position: absolute
 	display: flex
 	flex-direction: column
-	height: 100%
-	width: 100%
 
 .header-space
 	min-height: $header-height
@@ -30,8 +28,8 @@ main
 	height: 100%
 
 .full-size
-	width: 100%
-	height: 100%
+	@extend .full-width
+	@extend .full-height
 
 header, footer
 	background: grey
@@ -60,7 +58,7 @@ aside
 	text-align: center
 
 .content-width
-	width: 100%
+	@extend .full-width
 	max-width: $content-width
 	@media screen and (max-width: $content-max-width)
 		max-width: $content-max-width
