@@ -1,11 +1,10 @@
+@import ../common
 
 $header-height: 30px
 $content-margin: 20px
 $content-width: 800px
 $content-max-width: 960px
 
-body, ul
-	margin: 0
 
 main
 	position: absolute
@@ -14,22 +13,6 @@ main
 
 .header-space
 	min-height: $header-height
-
-.grow
-	flex-grow: 1
-
-.fixed
-	position: fixed
-
-.full-width
-	width: 100%
-
-.full-height
-	height: 100%
-
-.full-size
-	@extend .full-width
-	@extend .full-height
 
 header, footer
 	background: grey
