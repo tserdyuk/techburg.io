@@ -35,7 +35,6 @@ header, footer
 
 .section, .header, .footer
 	box-sizing: border-box
-	max-width: $content-width
 	margin: 0 auto
 
 .section
@@ -45,9 +44,7 @@ header, footer
 	pointer-events: none
 	display: flex
 	height: 100%
-	> div
-		width: 100%
-		max-width: $content-width
+
 aside
 	flex-grow: 1
 	background: rgba(0, 0, 0, 0.15)
@@ -56,9 +53,10 @@ aside
 	font-weight: bold
 	text-align: center
 
+.content-width
+	width: 100%
+	max-width: $content-width
+
 @media screen and (max-width: $content-max-width)
-	.section, .header, .footer
+	.content-width
 		max-width: $content-max-width
-	.overlay
-		> div
-			max-width: $content-max-width
