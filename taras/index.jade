@@ -4,7 +4,7 @@ block head
 	title Taras Serdyuk
 	link(rel="stylesheet", href="style.css")
 block body
-	main.full-size
+	main.absolute.v-flex.full-size
 		header.fixed.full-width.grey
 			.content Taras Serdyuk - Full-Stack Developer
 		header: .content
@@ -18,7 +18,7 @@ block body
 		+section("Contacts", "#316F7F")
 			include _info/lorem.jade
 		footer.grey: .content Footer
-	.overlay.fixed.full-size
+	.overlay.fixed.flex.full-size
 		aside.grow
 		.content
 		aside.grow
