@@ -5,7 +5,7 @@ block head
 	link(rel="stylesheet", href="style.css")
 block body
 	main
-		header: .header.content-width Taras Serdyuk - Full-Stack Developer
+		header.fixed: .header.content-width Taras Serdyuk - Full-Stack Developer
 		.header-space
 		+section("About Me", "#8BBECC")
 			include _info/lorem.jade
@@ -17,7 +17,7 @@ block body
 		+section("Contacts", "#316F7F")
 			include _info/lorem.jade
 		footer: .footer.content-width Footer
-	.overlay
+	.overlay.fixed
 		aside.grow
 		.content-width
 		aside.grow
