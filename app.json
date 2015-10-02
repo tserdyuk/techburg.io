@@ -1,3 +1,6 @@
 {
-  "jadeLocals": "taras/locals.json"
+  "jadeLocals": "taras/locals.json",
+  "scripts": {
+	  "taras/colors.js": "taras/colors.js"
+  }
 }
