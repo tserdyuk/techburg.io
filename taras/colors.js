@@ -1,7 +1,8 @@
 
+const [min, range, gap] = [100, 40, 40]
 const colors = [
-	[0,0,0], [0,0,1], [0,1,0], [0,1,1],
-	[1,0,0], [1,0,1], [1,1,0], [1,1,1]
+	[0,0,1], [0,1,0], [0,1,1],
+	[1,0,0], [1,0,1], [1,1,0]
 ].map(color)
 
 array(document.getElementsByTagName('section'))
@@ -10,7 +11,8 @@ array(document.getElementsByTagName('section'))
 
 
 function color([r, g, b]) {
-	const channel = (k) => random(160 + 40 * k, 20).toString(16)
+	const channel = (k) =>
+		random(min + (range + gap) * k, range).toString(16)
 	return '#' + channel(r) + channel(g) + channel(b)
 }
 
