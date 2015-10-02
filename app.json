@@ -2,5 +2,7 @@
   "jadeLocals": "taras/locals.json",
   "scripts": {
 	  "taras/colors.js": "taras/colors.js"
-  }
+  },
+  "sync": "root@techburg.io:/home/site/staging",
+  "deploy": "root@techburg.io:/home/site/prod"
 }
