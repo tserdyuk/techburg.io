@@ -5,19 +5,12 @@ block head
 	link(rel="stylesheet", href="style.css")
 block body
 	main.absolute.v-flex.full-size
-		header.fixed.full-width.grey
-			.content Taras Serdyuk - Full-Stack Developer
+		header.fixed.full-width.grey: .content
 		header: .content
-		+section("About Me", "#8BBECC")
-			include _info/lorem.jade
-		+section("Featured Projects", "#61DEFF")
-			include _info/lorem.jade
-		+section("Blog", "#AEEEFF")
-			nav: ul: each post in taras.posts
-				li: a(href= 'blog/'+ post.ref +'.html')= post.title
-		+section("Contacts", "#316F7F")
-			include _info/lorem.jade
-		footer.grey: .content Footer
+		+section("#8BBECC") I am Taras Serdyuk
+		+section("#61DEFF") And this is my website
+		+section("#AEEEFF") More stuff coming soon...
+		footer.grey: .content
 	.overlay.fixed.flex.full-size
 		aside.grow
 		.content

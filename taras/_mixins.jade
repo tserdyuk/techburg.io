@@ -1,9 +1,7 @@
 
-mixin section(title, color)
-	section.grow(style= 'background: ' + color)
-		.content
-			.title= title
-			block
+mixin section(color)
+	section.grow.flex(style= 'background: ' + color)
+		.content.center: block
 
 
 - var getPost = function(ref) {
