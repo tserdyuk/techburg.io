@@ -4,6 +4,25 @@ mixin section(color)
 		.content.center: block
 
 
+mixin use1(name, url)
+	li: a(href=url, target="_blank")=name
+
+mixin use1s(name, url)
+	li: a(href=url, target="_blank"): s=name
+
+mixin use2(name, url, name2, url2)
+	li
+		a(href=url, target="_blank")=name
+		span &nbsp;&#8594;&nbsp;
+		a(href=url2, target="_blank")=name2
+
+mixin use2s(name, url, name2, url2)
+	li
+		a(href=url, target="_blank"): s=name
+		span &nbsp;
+		a(href=url2, target="_blank")=name2
+
+
 - var getPost = function(ref) {
 -	return posts.filter(function(post) {
 -		return post.ref == ref
@@ -15,3 +34,4 @@ mixin post(ref)
 	block head: title= getPost(ref).title
 	block body
 		article: block
+	
