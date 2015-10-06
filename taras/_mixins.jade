@@ -5,22 +5,23 @@ mixin section(color)
 
 
 mixin use1(name, url)
-	li: a(href=url, target="_blank")=name
+	li: +link(name, url)
 
 mixin use1s(name, url)
-	li: a(href=url, target="_blank"): s=name
+	+use1('<s>' + name + '</s>', url)
 
 mixin use2(name, url, name2, url2)
 	li
-		a(href=url, target="_blank")=name
+		+link(name, url)
 		span &nbsp;&#8594;&nbsp;
-		a(href=url2, target="_blank")=name2
+		+link(name2, url2)
 
 mixin use2s(name, url, name2, url2)
-	li
-		a(href=url, target="_blank"): s=name
-		span &nbsp;
-		a(href=url2, target="_blank")=name2
+	+use2('<s>' + name + '</s>', url, name2, url2)
+
+
+mixin link(name, url)
+	a(href=url, target="_blank")!=name
 
 
 - var getPost = function(ref) {
@@ -34,4 +35,3 @@ mixin post(ref)
 	block head: title= getPost(ref).title
 	block body
 		article: block
-	
