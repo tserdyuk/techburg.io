@@ -7,11 +7,11 @@ block body
 	main.absolute.v-flex.full-size
 		header.fixed.full-width.grey: .content
 		header: .content
-		+section("#8BBECC") I am Taras Serdyuk
-		+section("#61DEFF") And this is my website
+		+section("#8BBECC"): .large I am Taras Serdyuk
+		+section("#61DEFF"): .large And this is my website
 		+section
-			h3 Things I Use
-			ul
+			h1 Things I Use
+			div
 				+use2("AngularJS", "https://angularjs.org/", "React", "https://facebook.github.io/react/")
 				+use1("BrowserStack", "https://www.browserstack.com/")
 				+use1("DigitalOcean", "https://www.digitalocean.com/")
@@ -38,7 +38,7 @@ block body
 				+use2s("Sublime Text", "http://www.sublimetext.com/", "Atom", "https://atom.io/")
 				+use1("Webdriver", "http://www.seleniumhq.org/projects/webdriver/")
 				+use2s("Windows", "https://en.wikipedia.org/wiki/Windows_7", "Ubuntu", "http://www.ubuntu.com/desktop")
-		+section("#AEEEFF") More stuff coming soon...
+		+section("#AEEEFF"): .large More stuff coming soon...
 		footer.grey: .content
 	.overlay.fixed.flex.full-size
 		aside.grow

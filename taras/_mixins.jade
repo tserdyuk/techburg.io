@@ -5,13 +5,13 @@ mixin section(color)
 
 
 mixin use1(name, url)
-	li: +link(name, url)
+	div: +link(name, url)
 
 mixin use1s(name, url)
 	+use1('<s>' + name + '</s>', url)
 
 mixin use2(name, url, name2, url2)
-	li
+	div
 		+link(name, url)
 		span &nbsp;&#8594;&nbsp;
 		+link(name2, url2)
