@@ -4,10 +4,10 @@ block head
 	title Taras Serdyuk
 	link(rel="stylesheet", href="style.css")
 block body
-	main.absolute.v-flex.full-size
+	.absolute.v-flex.full-size
 		header.fixed.full-width.grey: .content
 		header: .content
-		+section("#8BBECC"): .large
+		+section: .large
 			| I am Taras Serdyuk <br> I build&nbsp;
 			a(href="https://github.com/tserdyuk", target="_blank") software
 		+section
@@ -39,10 +39,11 @@ block body
 				+use2s("Sublime Text", "http://www.sublimetext.com/", "Atom", "https://atom.io/")
 				+use1("Webdriver", "http://www.seleniumhq.org/projects/webdriver/")
 				+use2s("Windows", "https://en.wikipedia.org/wiki/Windows_7", "Ubuntu", "http://www.ubuntu.com/desktop")
-		+section("#AEEEFF"): .large More stuff coming soon...
+		+section: .large More stuff coming soon...
 		footer.grey: .content
 	.overlay.fixed.flex.full-size
 		aside.grow
 		.content
 		aside.grow
 	script(src="colors.js")
+	link(rel="stylesheet", href="colors.css")
